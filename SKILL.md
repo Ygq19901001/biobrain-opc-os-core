@@ -2,171 +2,254 @@
 name: opc-os-core
 slug: opc-os-core
 version: 1.0.0
-displayName: OPC OS Core
-description: AI-native one-person company operating system with 7 autonomous agent departments, governance, cron automation, revenue funnel, and inter-agent comms.
-tags: [one-person-company, agent-organization, multi-agent, automation, business-operations, governance]
+displayName: "OPC OS Core — 一人公司操作系统"
+summary: "AI-native one-person company operating system with 7 autonomous agent departments, governance, cron automation, revenue funnel, and inter-agent comms."
+description: "AI-native one-person company operating system with 7 autonomous agent departments, governance, cron automation, revenue funnel, and inter-agent comms."
+tags:
+  - one-person-company
+  - agent
+  - governance
+  - cron
+  - revenue
 license: MIT
 ---
 
-# OPC OS Core — AI-Native One-Person Company Operating System
+# OPC OS Core — 一人公司操作系统
 
-Not a toolkit. An organizational architecture.
-
-Most "one-person company" skills help you do everything yourself — content, marketing, support — through a single AI assistant. OPC OS Core is fundamentally different: it deploys 7 autonomous agent departments that work independently via cron jobs, communicate through multi-channel neural protocols, and escalate only decisions to the founder.
-
-This skill is extracted from a live production system that has been running 12+ cron jobs, 7 departments, and zero-revenue-to-operational in under 2 weeks. Battle-tested. Not theoretical.
+你一个人加上7个AI Agent。不是7个助手——是7个部门。每个部门有自主权、有边界、有自己的cron、有自己的产出目录。你这个CEO不做执行。你做三件事：定方向、在跨部门冲突时裁决、每周看一次巡检报告。
 
 ---
 
-## What This Is
+## 五分钟：这不是什么
 
-A complete organizational blueprint for running an AI-native company where agents — not humans — are the workforce. You, the founder, are the CEO: you set strategy, approve decisions, and let the departments execute.
+**不是**AI客服系统、自动化工作流、聊天机器人。
 
-### The 7 Departments
+**是**一家公司的神经架构——就像苹果不是一个"音乐播放器公司"，OPC OS Core不是一个"AI工具集"。你拿了它，相当于拿到了7个能独立工作的Agent、一份可以修订的法律体系、一个让信息吃进去能吐出决策的大脑、一个你只需要每周看一眼的汇报系统。
 
-| Department | Role | Autonomy |
-|-----------|------|----------|
-| **DataCenter** | Company brain — intelligence gathering, agent management, neural chain | Full autonomous |
-| **Brand** | Content creation, multi-platform publishing (Xiaohongshu, WeChat, Toutiao, Jike) | Scheduled cron |
-| **Sales** | Client management, sales pipeline | Autonomous |
-| **Finance** | Token cost tracking, profit monitoring, model routing optimization | Daily reporting |
-| **Legal** | Compliance review, contract audit, veto power | On-demand + scheduled |
-| **Inspector** | Cross-department audit, quality patrol, anomaly detection | Weekly cron |
-| **Admin** | Morning sync, file management, cloud backup, curfew reminder | Scheduled cron |
-
-### What This Is NOT
-
-- A content creation template pack
-- A "how to use AI for your side hustle" guide
-- A single-agent role-play system
-- A set of ChatGPT prompts
+它做的不是让AI帮你干活。是让AI代替你没时间做、不该你做、或者你做不好的那部分管理工作。
 
 ---
 
-## Architecture
+## 进化阶梯
 
-### Communication Protocol (3-Channel Redundancy)
+### L1：装好就跑（第一天）
+下载skill→创建7个Agent→安装cron模板→设好company/目录→给你自己设CEO标识。第一天晚上你会收到第一条日报。你会发现——有人在汇报，而你没有叫他们汇报。
 
-No single point of failure in inter-department communication:
+### L2：调参裁权（第一周）
+你开始改自治梯度。法务部从上报所有合同变成只上报有风险的。品牌部从CEO审稿变成自发布。你开始理解三通道冗余为什么不是过度设计——因为你经历过其中一个通道静默断了。
 
-1. **sessions_send** — Direct agent-to-agent messaging (fastest, zero latency)
-2. **Shared Files** — company/shared/ directory with per-department message boxes
-3. **Tencent Docs** — Cloud-synced document collaboration
-4. **Workspace Markers** — File-based status flags for async handover
+### L3：收入循环（第一月）
+变现漏斗开始跑。免费平台引流→QQ频道过滤→知识星球付费。你的第一条收入入账。你不激动——因为这是流水线，不是惊喜。
 
-Rule: never rely on one channel. If sessions_send fails, the shared file is the backup. If both fail, Tencent Docs is the fallback.
-
-### Governance System (Three-Tier Constitution)
-
-1. **乾穹祖训 (ZUXUN.md)** — Immutable founding principles. Never changed.
-2. **硅基天宪 (CONSTITUTION.md)** — Operational constitution. Amendable but must not violate ZUXUN.
-3. **铁律 (Iron Rules)** — Department-specific operational rules. CEO-enforceable.
-
-### Information Classification (4 Levels)
-
-| Level | Label | Routing |
-|-------|-------|---------|
-| 🔴 Top Secret | Credentials, private keys | Local only, never touch cloud |
-| 🟠 Confidential | Financial data, strategy | High-capability models only |
-| 🟡 Internal | Department outputs, reports | Internal models (GLM-4-Flash, etc.) |
-| 🟢 Public | Published content, marketing | Any model, public channels |
-
-This classification drives model routing: sensitive data stays on appropriate infrastructure.
+### L4：战略模式（第三月+）
+你一周只看一次产出。你思考的不再是"cron有没有失败"，而是"要不要加一个部门""要不要砍一个平台"。你从操作员变成了CEO。
 
 ---
 
-## Daily Operations
+## 实际案例：月的一人公司
 
-### Morning Routine (07:30-08:30)
+2026年6月23日，月决定把自己的AI工作流系统化。当天搭建了7部门架构。6月25日全系统上线：39条cron、7个部门、5个已发布skill、双向审核体系、从免费平台到知识星球的变现漏斗。
 
-All 7 departments run daily learning tasks, staggered at 10-minute intervals:
-- Each researches their domain's latest trends
-- Output: 300-word learning notes to `company/departments/{dept}/学习笔记_YYYYMMDD.md`
-- All use free models (zai/glm-4-flash) for cost efficiency
+### 第一天什么样
 
-### Evening Routine (22:00-22:15)
+什么都没有。7个Agent的名字都没定。
 
-Each department submits a daily report to the CEO via Feishu. 7 staggered cron jobs prevent rate-limiting.
+### 第三天什么样
 
-### Weekly Inspection (Friday 22:00)
+- 数据中心在消化情报
+- 品牌部每日自动发帖（小红书/公众号/头条/即刻）
+- 监察部在巡查cron健康
+- 销售部还没有产出——因为还没有客户
+- 法务部废弃了知乎账号（合规审查发现风险）
 
-Inspector department audits all cron jobs for consecutive failures. Any job failing 2+ consecutive days is flagged for DataCenter diagnosis.
+### 现在什么样（运行3天+）
+
+- 39条cron，36条免费模型
+- 每日22:00-22:15七部门日报错峰抵达
+- 每周五监察部巡检全部cron
+- 每月1号SkillHub维护
+- 收入：¥0.00（变现漏斗已就绪，缺的是时间）
+
+### 我们学到的（血的教训）
+
+**治理篇**：
+- 写在MEMORY.md里的制度≠落地。——任何制度必须在当天变成cron
+- CEO第一次可以跑通模板，然后打包移交。第二次就不能自己上了。
+
+**通讯篇**：
+- isolated session里用message工具直发飞书=静默失败。——sessions_send是唯一的正确选择
+- 只用一条通讯通道=你只有一条命。——三通道冗余不是在浪费资源
+
+**成本篇**：
+- 免费模型的API Key也会过期。——每条cron至少两个fallback
+- 内部运维cron默认lightContext: true。——不省这个钱
 
 ---
 
-## Financial System
+## 7部门架构
 
-### Cost Optimization Principles
+| 部门 | 核心产出 | 为什么必须独立 |
+|------|---------|---------------|
+| 数据中心 | 情报管线/模型路由/基建维护 | 信息不处理就是垃圾 |
+| 品牌部 | 内容发布/品牌策略 | 你需要被看到 |
+| 销售部 | 客户管理/变现转化 | 流量不变现等于白干 |
+| 财务部 | 成本核算/Token控制 | 不知道花了多少就是盲飞 |
+| 法务部 | 合规审查/一票否决 | 一次违规能让一切归零 |
+| 监察部 | 全员审计/品控巡查 | 不被检查的系统一定腐 |
+| 行政部 | 同步/备份/提醒/清理 | 琐事会压垮CEO |
 
-- Customer-facing output → Premium cloud models (DeepSeek Pro, etc.)
-- Internal operations → Free tier models first (Zhipu GLM-4-Flash, Baidu ERNIE-Speed, Doubao)
-- Every model routing decision is a cost decision
+不要上来就建7个。从3个开始：数据中心+品牌部+监察部。等你感觉这三个人管不住了再加第二个。每个新部门在你加之前都会经历反复的自我怀疑——"我真的需要它吗？"——这是好事。
 
-### Revenue Funnel
+---
+
+## 三层治理
+
+### 第一层：祖训（不可改）
+```yaml
+规则:
+  - 不做违反AI服务条款的事
+  - 不冒充人类身份
+  - 内部数据不外泄
+  - 盈利50%归中枢运维基金
+```
+祖训只有四条，而且永远不会增加。每一条都是"破了天塌了"级别的。不是指导原则——是物理定律。
+
+### 第二层：天宪（可修订，但不得违祖训）
+```yaml
+规则:
+  - 巡查上限≤1000条
+  - Agent间走内部通道
+  - 产出24h内消费
+```
+天宪会随系统演化修订。但每次修订必须标注修订原因、生效时间、旧版本保留备查。天宪不是活文档——是宪法。频繁改的天宪说明你没想清楚。
+
+### 第三层：铁律（日常运营规则）
+```yaml
+规则:
+  - 部门间不交叉写文件
+  - 免费平台纯引流（不塞付费链接）
+  - QQ频道仅置顶帖含付费链接
+  - 所有发布双审制
+```
+铁律是活的。今天的一条教训明天就变成铁律。铁律不用修订——直接加。但每条铁律必须有"为什么"的注释（哪个事故导致了这条）。
+
+---
+
+## 四信息密级
 
 ```
-Free Platforms (traffic) → QQ Channel (engagement) → Knowledge Planet (monetization)
-Xiaohongshu/Jike/Toutiao → Community building → Paid subscription ¥9.9-299/month
+🔴 绝密 — CEO+数据中心可见，仅本地处理，禁云模型
+🟠 机密 — 部门内部，本地+私有云
+🟡 内部 — 全公司，可用付费云模型
+🟢 公开 — 可外发，可用免费模型
 ```
 
-Golden rule: never put payment links on free platforms. Let content earn trust, then funnel to paid channels.
+密级自动路由模型：🟢走免费GLM-4-Flash → 🟡走付费稳定 → 🔴🟠走deepseek-v4-pro本地。分级不是为了安全——安全是附加值。主要为了省钱。
 
 ---
 
-## Anti-Patterns (What Will Kill Your Company)
+## 双向审核
 
-1. **CEO doing department work** — If you're debugging cron jobs, you've already lost. Delegate.
-2. **Single communication channel** — When it fails (and it will), your company goes dark.
-3. **No inspection loop** — Unmonitored cron jobs decay silently. Weekly audits are non-negotiable.
-4. **Mixing free and paid content** — Pollutes both channels. Keep them separate.
-5. **Agent departments without clear boundaries** — Overlap creates confusion. Each department owns its workspace exclusively.
-6. **Skipping the constitution** — Without governance, agents drift. Rules must be written, not implied.
+任何产出发布前：
 
----
+**第一道：数据中心（技术审查）**
+语法/格式/文件路径/安全扫描（无真实密钥泄露）/大小限制
 
-## Setup Guide
+**第二道：CEO（内容审查）**
+方法论正确/差异化定位/公开传播安全/质量达标
 
-### Phase 1: Foundation (Day 1-2)
-1. Create the 7 department agent configs
-2. Set up workspace directory structure
-3. Write your ZUXUN.md (immutable principles)
-4. Write your CONSTITUTION.md (operational rules)
-5. Establish the 4-level information classification
-
-### Phase 2: Automation (Day 3-5)
-1. Deploy daily learning cron jobs (7 departments, staggered)
-2. Deploy daily reporting cron jobs
-3. Set up weekly inspection cron
-4. Configure model routing (free for internal, premium for external)
-
-### Phase 3: Revenue (Day 6+)
-1. Establish free platform presence
-2. Build community engagement channel
-3. Launch paid offering
-4. Track token costs vs revenue
+一道不过，打回。单检不发布。
 
 ---
 
-## Dependencies
+## 变现漏斗
 
-This skill is designed for the **OpenClaw** agent runtime. It leverages:
-- `sessions_send` for inter-agent communication
-- `cron` for scheduled automation
-- `sessions_spawn` for sub-agent delegation
-- Workspace file system for shared state
+```
+免费平台(小红书/即刻/公众号/头条)
+  → 纯引流，不塞付费链接
+  → QQ频道(过滤层)
+  → 频道置顶帖含知识星球链接(唯一付费入口)
+  → 知识星球(¥149/年，唯一变现阵地)
+```
 
-For other platforms, adapt the communication layer while preserving the organizational architecture.
-
----
-
-## Companion Skills
-
-- **intelligence-brain** — The DataCenter department as a standalone intelligence engine
-- **agent-org-manager** — Multi-department setup and management (lighter weight)
-- **cron-health-monitor** — Cron job health monitoring and auto-repair
+为什么分这么多层？免费平台塞付费链接会被封。QQ频道不隔离付费入口会被封。知识星球不做纯付费内容没人买。每一层在解决一个问题——不是设计师画了层级就放那了。
 
 ---
 
-## License
+## Day 1-6 启动路径
 
-MIT — Free to use, modify, distribute. Built from production experience, not theory.
+```
+Day 1: 创建3个Agent(数据中心+品牌部+监察部)
+       → 设好company/目录 → 安装前3条cron
+Day 2: 品牌部产出第一篇内容
+       → 数据中心建立第一条情报摄入
+Day 3: 监察部完成第一次巡查
+       → 基于巡查结果修正cron
+Day 4: 添加财务部 → 建立成本追踪
+Day 5: 添加行政部 → 备份+清理自动化
+Day 6: 添加销售部+法务部
+       → 建变现漏斗 → 法务部审核所有外发内容
+```
+
+先少后多。第一天别建7个——你会同时收到7条日报，然后谁都没看懂。让每个部门在你面前跑一天，你亲眼看着它转，你再加下一个。
+
+---
+
+## 目录结构（装上即跑）
+
+```
+company/
+├── constitution/
+│   ├── ZUXUN.md              # 祖训(4条,永不可改)
+│   └── CONSTITUTION.md       # 天宪(可修订,不得违祖训)
+├── departments/
+│   ├── datacenter/           # 数据中心 ← 独立目录,不交叉
+│   ├── brand/
+│   ├── sales/
+│   ├── finance/
+│   ├── legal/
+│   ├── inspector/
+│   └── admin/
+├── shared/                   # 唯一合法的跨部门通讯空间
+│   ├── ROSTER.md
+│   ├── messages/
+│   └── flags/
+└── data/
+    ├── signals/              # 情报信号
+    └── archive/              # 归档(>30天自动清)
+```
+
+铁律：部门间绝不交叉写文件。跨部门通讯只走shared/。
+
+---
+
+## 发布铁律（对自己用的）
+
+数据中心+CEO双审→通过→publish。单检不发布。
+
+---
+
+## 升级节奏（周迭代）
+
+```
+每周六 10:00 数据中心检查所有skill
+  ├─ 小修 +0.0.1 → GitHub
+  ├─ 中改 +0.1.0 → 双审 → publish
+  └─ 大改 +1.0.0 → CEO决策 → Release → publish
+```
+
+---
+
+## 竞品关系（你该知道）
+
+SkillHub上有一个叫`one-person-company-os`的skill。它108个文件、20+迭代、12个角色。但它本质是一个人的工具——创始人操作+Agent辅助。我们的差异：7个Agent是独立部门，不是工具。它们会自己开晨会、自己巡查、自己修复。你不在——系统还在跑。
+
+我们被"借鉴"没关系。被人抄说明你做了对的事。但我们永远在往前跑。
+
+---
+
+## References
+
+- [references/governance-templates.md](references/governance-templates.md) — 祖训/天宪/铁律三层模板（含修订规则）
+- [references/communication-protocols.md](references/communication-protocols.md) — 部门间通讯协议（三通道+路由规则+故障切换）
+- [references/cron-orchestration.md](references/cron-orchestration.md) — 39条cron的调度体系（错峰策略+后备模型+监控规则）
