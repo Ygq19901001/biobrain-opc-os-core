@@ -1,7 +1,7 @@
 ---
 name: opc-os-core
 slug: opc-os-core
-version: 1.0.0
+version: 1.0.1
 displayName: "OPC OS Core — 一人公司操作系统"
 summary: "AI-native one-person company operating system with 7 autonomous agent departments, governance, cron automation, revenue funnel, and inter-agent comms."
 description: "AI-native one-person company operating system with 7 autonomous agent departments, governance, cron automation, revenue funnel, and inter-agent comms."
